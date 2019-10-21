@@ -7,29 +7,15 @@ import java.util.Scanner;
 
 public class Test {
     public static void main(String[] args) {
-        Hobby daddy = new Hobby();                         //call constructor without parameters
-        daddy.setWhoseHobby("my daddy");
-        daddy.setWhatHobby("football");
-        //daddy.getS1();
-        daddy.tellAboutHobby();
+        Hobby daddy = new PapaHobby("my daddy", "football", 1);
 
-        Hobby mummy = new Hobby("my mummy", "skating"); //call constructor with
-        mummy.tellAboutHobby();                                                 // 2 parameters
+        Hobby me = new MyHobby("My", "chess",5);
 
-        Hobby me = new Hobby("mine");          //call constructor with 1 parameters
-        System.out.println("What is your hobby?");          //input from keyboard
-        Scanner scanner = new Scanner(System.in);
-        String myHobby = scanner.nextLine();
-        me.setWhatHobby(myHobby);
-        System.out.println(me.toString());
+        Hobby mummy = new MyHobby("My mummy", "sewing", 10);
 
-        Hobby[] arrayOfHobbies = new Hobby[3];              //creating array of objects
-        arrayOfHobbies[0] = daddy;                          //initializing array
-        arrayOfHobbies[1] = mummy;
-        arrayOfHobbies[2] = me;
+        Hobby arrayOfHobbies[] = {daddy, me, mummy};                        //initializing array
         System.out.println();
-        System.out.println("Realization thechess method tellAboutHobby through the array: ");
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < arrayOfHobbies.length; i++) {
             arrayOfHobbies[i].tellAboutHobby();
         }
     }
