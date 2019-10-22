@@ -15,8 +15,8 @@ public class Test {
 
         Hobby arrayOfHobbies[] = {daddy, me, mummy};                        //initializing array
         System.out.println();
-        for (int i = 0; i < arrayOfHobbies.length; i++) {
-            arrayOfHobbies[i].tellAboutHobby();
+        for (Hobby s:arrayOfHobbies){
+            s.tellAboutHobby();
         }
     }
 }
