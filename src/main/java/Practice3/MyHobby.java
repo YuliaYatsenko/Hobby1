@@ -9,8 +9,10 @@ public class MyHobby extends Hobby {
     }
 
     @Override
-    public void tellAboutHobby() {
+    public void tellAboutHobby() throws MyException{
+        if (numOfYears<0) throw new MyException();
         System.out.println(getWhoseHobby()+" favorite hobby is "+getWhatHobby()+". Experience in "+ getWhatHobby()+ " is " + numOfYears + " years.");
+
 
     }
 }

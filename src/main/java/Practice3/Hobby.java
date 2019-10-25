@@ -13,10 +13,14 @@ public abstract class Hobby {
     private String whoseHobby;
     private String whatHobby;
 
+    public Hobby(){
+
+    }
+
     public Hobby(String whatHobby){
         this.whatHobby=whatHobby;
     }
-    public Hobby(String whoseHobby, String whatHobby) { //third constructor with 2 parameters
+    public Hobby(String whoseHobby, String whatHobby){
         this.whoseHobby = whoseHobby;
         this.whatHobby = whatHobby;
     }
@@ -32,8 +36,10 @@ public abstract class Hobby {
     public void setWhatHobby(String whatHobby) {
         this.whatHobby = whatHobby;
     }
-    public abstract void tellAboutHobby();                              //method tellAboutHobby
+    public abstract void tellAboutHobby() throws MyException;                              //method tellAboutHobby
 }
+
+
 
 
 
